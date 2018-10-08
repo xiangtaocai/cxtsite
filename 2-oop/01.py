@@ -11,7 +11,7 @@ mingyue = Student()
 #听python的学生,注意层级
 class PythonStudent():
     name = None
-    age = 19
+    age = 18
     course = 'python'
     #默认出来一个self
     def doHomework(self):
