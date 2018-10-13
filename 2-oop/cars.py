@@ -1,33 +1,4 @@
-class Car():
-    "模拟汽车的简单尝试"
-    def __init__(self,make,model,year):
-        "initialize car's attribute"
-        self.make = make.title()
-        self.model = model.title()
-        self.year = year
-        self.odometer_reading = 0
-
-    def get_descriptive_name(self):
-        "Return descriptive information"
-        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
-        return long_name
-
-    def read_odometer(self):
-        "打印车里程"
-        print("This car has " + str(self.odometer_reading) + " miles on it.")
-
-
-my_new_car = Car('audi','a4',2018)
-#第一个方法修改属性的值,再调用方法
-my_new_car.odometer_reading = 23
-print(my_new_car.get_descriptive_name())
-print(my_new_car.read_odometer())
-#第二个方法修改属性的值,定义一个方法，直接将值传递给一个方法内部更新。
-
-#self.odometer_reading = mileage
-
-#第三个方法,对属性的值进行递增
-
+'''car 类的模块'''
 
 class Car():
     "模拟汽车的简单尝试"
@@ -60,7 +31,6 @@ class Car():
         else:
             print("You can't rool back the odometer.")
 
-
 class Battery():
     """A simple attempt to model a battery for an electric car."""
 
@@ -72,28 +42,6 @@ class Battery():
         """Print a statement describing the battery size."""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
-    def get_range(self):
-        """Print a statement about the range this battery provides."""
-        if self.battery_size == 60:
-            range = 140
-        elif self.battery_size == 85:
-            range = 185
-
-        message = "This car can go approximately " + str(range)
-        message += " miles on a full charge."
-        print(message)
-
-
-class Battery():
-    """A simple attempt to model a battery for an electric car."""
-
-    def __init__(self, battery_size=60):
-        """Initialize the batteery's attributes."""
-        self.battery_size = battery_size
-
-    def describe_battery(self):
-        """Print a statement describing the battery size."""
-        print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
     def get_range(self):
         """Print a statement about the range this battery provides."""
